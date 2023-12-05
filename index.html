@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Fardali</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div  id="header">
+        <div class="container">
+        <nav>
+
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#certificate">Certificate</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+        </nav>
+        <div class="header-text">
+                <br><br><h1>Hi, Saya <span>Fardali</span><br> Anak Sysadmin</h1>
+        </div>
+        </div>
+    </div>
+
+<!-------about------->
+<div id="about">
+    <div class="container">
+            <div class="row">
+                <div class="=about-col-1">
+                    <img src="li.png">
+                </div>
+                <div class="about-col-2">
+                   <br><br><h1 class="sub-title">About Me</h1>
+                    <br><br><p>
+                        Nama saya adalah Fardali,usia saya sekarang sudah menginjak 18 tahun.
+                        Saya seorang murid di SMKN 1 Nglegok.Jurusan saya di SMKN 1 Nglegok adalah TKJ.
+                        Disini saya sedang belajar membuat web menggunakan HTML dan CSS.
+                        Ini adalah Web Porfolio pertama saya.
+                    </p>
+                <div class="tab-titles">
+                    <br><p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                            <p class="tab-links " onclick="opentab('Hobi')">Hobby</p>
+                            <p class="tab-links " onclick="opentab('organisasi')">Organization</p>
+                </div>
+                <br><div class="tab-contents active-tab" id="Education">
+                        <ul>
+                            <li><span>2012-2018</span><br>Sekolah Dasar Negeri 1 Jeblog</li>
+                            <li><span>2018-2020</span><br>Sekolah Menegah Pertama Negeri 1 Talun</li>
+                            <li><span>2021-2024</span><br>Sekolah Menengah Kejuruan Negeri 1 Nglegok</li>
+                        </ul>
+                </div>
+                <div class="tab-contents" id="Hobi">
+                    <ul>
+                        <li><span>80%</span><br>Bermain Sepak Bola/Futsal</li>
+                        <li><span>70%</span><br>Menyanyi</li>
+                        <li><span>80%</span><br>Menggambar</li>
+                        <li><span>75%</span><br>Bermain Game</li>
+                    </ul>
+            </div>
+            <div class="tab-contents" id="organisasi">
+                <ul>
+                    <li><span>2012-Sekarang</span><br>Pramuka</li>
+                    <li><span>2020-Sekarang</span><br>Karang Taruna</li>
+                    <li><span>2020-Sekarang</span><br>IPNU</li>
+                    <li><span>2018-Sekarang</span><br>Yasinan</li>
+                </ul>
+        </div>
+            </div>
+                </div>
+            </div>
+    </div>
+
+
+    <!-------Certificate------->
+<div id="certificate">
+    <div class="container">
+        <center><h1 class="sub-title">Certificate</h1></center>
+        <div class="certi-list">
+            <div class="certi">
+                <img src="html.jpg">
+                <div class="title">
+                    <center><br><br><h2>Certificate HTML</h2></center>
+                </div>
+            </div>
+            <div class="certi">
+                <img src="html.jpg">
+                <div class="title">
+                    <center><br><br><h2>Certificate CSS</h2></center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-----Kontak----->
+<div id="contact">
+<section class="contact">
+    <div class="container1">
+        <br><br><br><center><h1 class="sub-title">Contact</h1></center>
+        <div class="contact-wrapper">
+            <div class="contact-form">
+                <br><br><h3>Send Message</h3>
+                <form>
+                    <div class="form-group">
+                        <br><input type="text" name="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <br><input type="email" name="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <br><textarea name="message" placeholder="Your Message"></textarea>
+                    </div>
+                    <br><button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <br><br><br><h3>Contact Me</h3>
+                <br><p><i class="fas fa-phone fa-beat"></i> 081214549612</p>
+                <br><p><i class="fas fa-envelope fa-beat"></i> fardali0272@gmail.com</p>
+                <br><p><i class="fas fa-map-marker fa-beat"></i> Jl Sumberasri Rt 02 Rw 03 Jeblog Talun Blitar</p>
+                <br><p><i class="fa-brands fa-instagram fa-beat"></i>far_dliii</p>
+                <br><p><i class="fa-brands fa-youtube fa-beat"></i> FARDALI</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+ <script>
+        var tablinks  = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+        }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+        }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+    }
+ </script>
+
+
+</body>
+</html>
